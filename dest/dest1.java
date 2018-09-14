@@ -26,7 +26,7 @@ public class dest1 {
         BufferedImage bi = null;
         File f;
         try {
-            f = new File("Output.png");
+            f = new File("/svol/Output.png");
             bi = ImageIO.read(f);
             System.out.println("Success");
         } catch (IOException e) {
@@ -40,11 +40,11 @@ public class dest1 {
         char ch;
         //StringBuilder t=new StringBuilder();
         try{
-        PrintWriter writer = new PrintWriter("/vol1/myfile.txt");
+        PrintWriter writer = new PrintWriter("/svol/myfile.txt");
         writer.print("");
         writer.close();
         }catch(Exception e){}
-        try(FileWriter fw = new FileWriter("/vol1/myfile.txt", true);
+        try(FileWriter fw = new FileWriter("/svol/myfile.txt", true);
         BufferedWriter bw = new BufferedWriter(fw);
         PrintWriter out = new PrintWriter(bw))
         {

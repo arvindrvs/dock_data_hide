@@ -33,11 +33,11 @@ public class source1 {
         BufferedImage tri = null;
         File f;
         File file;
-        file = new File("note.txt");
+        file = new File("/svol/note.txt");
         Scanner sc = new Scanner(file);
         sc.useDelimiter("");
         try {
-            f = new File("test.png");
+            f = new File("/svol/test.png");
             bi = ImageIO.read(f);
             tri = ImageIO.read(f);
             System.out.println("Success");
@@ -71,7 +71,7 @@ public class source1 {
             }
         }
         try {
-               f = new File("Output.png");
+               f = new File("/svol/Output.png");
                ImageIO.write(tri, "png", f);
             } catch (IOException e) {
             System.out.println("Error: " + e);
