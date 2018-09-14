@@ -10,14 +10,14 @@ A java application which takes a file as input and hides it in an image by bit m
 # Usage #
 Pull Docker image and run:
 
-For source:  
+**For source:**  
 `docker pull arvindrvs21/encryp_source`  
 `docker create -v Data:/svol --name=svol source`  
 `docker cp test.png note.txt svol:/svol/`  
 `docker start svol`  
 `docker svol:/svol/Output.png .`  
 
-For destination:  
+**For destination:**  
 `docker pull arvindrvs21/encryp_dest`  
 `docker run --name=dvol --volumes-from svol dest`  
 (For this command to work create svol volume from source commands)  
