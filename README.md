@@ -19,7 +19,8 @@ For source:
 
 For destination:  
 `docker pull arvindrvs21/encryp_dest`  
-`docker run --name=dvol --volumes-from svol dest` (For this command to work create svol volume from source commands)  
+`docker run --name=dvol --volumes-from svol dest`  
+(For this command to work create svol volume from source commands)  
 `docker cp dvol:/svol/Output.png .` (Only when source and destination are run in same system : It is a checking process)  
 `docker cp Output.png dvol:/svol/`  
 `docker start dvol`  
