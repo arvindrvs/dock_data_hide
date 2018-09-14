@@ -29,7 +29,7 @@ For destination:
 There are 2 docker containers one for encryption while the other for decryption. Both containers are built from the Openjdk (official) image. Both these containers use a shared volume for storing the original and encypted image along with the encrypted and decrypted message. The output files are written inside a volume, from which the file can be copied to the host system using `docker cp` command.  
 The application initially copies the last bit of *B* values in *RGB* of image and writes it to the last bit of *R*.  It then reads the input file character by character and *XOR* the value with the last bit of *B* thereby hiding the image. A 0 value in *G* indicates that ending of the message.  
 
-`test.png - Initial image in which information is gonna be hidden  
-note.txt - Data which is hidden inside test.png  
-Output.png - Encrypted image after hiding the data  
-myfile.txt - Decrypted data from Output.png image`  
+>test.png - Initial image in which information is gonna be hidden  
+>note.txt - Data which is hidden inside test.png  
+>Output.png - Encrypted image after hiding the data  
+>myfile.txt - Decrypted data from Output.png image  
